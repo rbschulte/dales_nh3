@@ -89,4 +89,6 @@
 	Update data on 10-02-2021. 
 	Continuation based on "_v05_dales-master_perc_chem". 
 	This is an update from DALES v4.2 to DALES v4.3. 
-	All of the above changes are applied to the source code of DALES v4.3. 
+	All of the above changes are applied to the source code of DALES v4.3.
+	- modsurface.f90: Changed the bugfix for thls, mentioned in v02 of this branch, to a 
+	  cleaner fix (line 475).
