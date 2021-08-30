@@ -39,24 +39,24 @@
 		  vertical grids. This was tested using testruns aerosolrad 410, 411, 412 & 413. No 
 		  reason for the differences were found. 
 	- Updates on bugfixes: 
-		* "thls bug" (fixed in version _v02): 
+		- "thls bug" (fixed in version _v02): 
 			!thls = 300 --> line is removed
-		* "rssoilmin(i,j) = rsmin_patch bug" (fixed in version _v02):
+		- "rssoilmin(i,j) = rsmin_patch bug" (fixed in version _v02):
 			* Newly added input rssoilmin to surface.interactive.inp is removed again.
 			* New fix: rssoilmin(i,j) = rssoilminav. The new input variable made this 
 			* DALES version incompatible with other versions. This way, the 
 			* surface.interactive.inp input file has the same input variables again.
-		* Changes per line modsurface.f90
-			*line 275: remove "allocate(rssoilmin_patch(xpatches,ypatches))"
-			*line 304: remove "rssoilmin_patch  = -1"
-			*line 363: remove ", rssoilmin_land(i)" from line
-			*line 259: remove "rssoilminav  = 0"
-			*line 487: remove "rssoilmin_patch(i,j)  = rssoilmin_land(landindex)"
-			*line 508: remove  line "rssoilminav   = rssoilminav  +  ..."
-			*line 1670: Add use modsurfdata, only : rssoilminav	
-			*line 1758: change "rssoilmin  (i,j) = rssoilmin_patch (tempx,tempy)" into "rssoilmin  (i,j) = rssoilminav" 
-		* Changes per line modsurfdata
-			*line 287: remove "real, allocatable :: rssoilmin_patch(:,:)..."
+		- Changes per line modsurface.f90
+			* line 275: remove "allocate(rssoilmin_patch(xpatches,ypatches))"
+			* line 304: remove "rssoilmin_patch  = -1"
+			* line 363: remove ", rssoilmin_land(i)" from line
+			* line 259: remove "rssoilminav  = 0"
+			* line 487: remove "rssoilmin_patch(i,j)  = rssoilmin_land(landindex)"
+			* line 508: remove  line "rssoilminav   = rssoilminav  +  ..."
+			* line 1670: Add use modsurfdata, only : rssoilminav	
+			* line 1758: change "rssoilmin  (i,j) = rssoilmin_patch (tempx,tempy)" into "rssoilmin  (i,j) = rssoilminav" 
+		- Changes per line modsurfdata
+			* line 287: remove "real, allocatable :: rssoilmin_patch(:,:)..."
 
 - _v06_dales-master_dales-v4-3:
 	Update data on 25-03-2021. 
