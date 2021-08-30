@@ -42,11 +42,11 @@
 		* "thls bug" (fixed in version _v02): 
 			!thls = 300 --> line is removed
 		* "rssoilmin(i,j) = rsmin_patch bug" (fixed in version _v02):
-			Newly added input rssoilmin to surface.interactive.inp is removed again.
-			New fix: rssoilmin(i,j) = rssoilminav. The new input variable made this 
-			DALES version incompatible with other versions. This way, the 
-			surface.interactive.inp input file has the same input variables again.
-			Changes per line:
+			* Newly added input rssoilmin to surface.interactive.inp is removed again.
+			* New fix: rssoilmin(i,j) = rssoilminav. The new input variable made this 
+			* DALES version incompatible with other versions. This way, the 
+			* surface.interactive.inp input file has the same input variables again.
+			* Changes per line:
 				* modsurface.f90
 					*line 275: remove "allocate(rssoilmin_patch(xpatches,ypatches))"
 					*line 304: remove "rssoilmin_patch  = -1"
